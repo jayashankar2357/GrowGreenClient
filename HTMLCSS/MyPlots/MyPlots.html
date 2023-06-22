@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+      />
+
+    <style>
+  
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {  
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+.container { 
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 3rem;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;  
+}
+
+
+.cta .heading-secondary {
+  color: inherit;
+  margin-bottom: 3.2rem;
+}
+
+
+.cta-plot-info{
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 3.2rem;
+  row-gap: 3.2rem;
+}
+
+
+.combination-of-label-and-dropdown
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(149, 240, 183, 0.394), rgba(56, 244, 106, 0.35)
+    ),
+    url("FarmLandCoconut.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-input {
+  width: 50%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: #bfc8c0;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+</style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cta">
+        <div class="cta-img-box" role="img" aria-label="Woman enjoying food"></div>
+        <div class="cta-text-box">
+          <h2 class="heading-secondary">Know the information of the My plots</h2>
+          <div class="cta-plot-info">
+            <div class="combination-of-label-and-dropdown">
+              <label class="cta-label">Location(Long/Lat)</label>
+              <input class="cta-input" type="text" />
+            </div>
+
+            <div class="combination-of-label-and-dropdown">
+              <label class="cta-label">Number of Trees planted:</label>
+              <label class="cta-label"></label>
+            </div>
+
+            <div class="combination-of-label-and-dropdown">
+              <label class="cta-label">Various trees are </label>
+              <label class="cta-label"></label>
+            </div>
+
+            <div class="combination-of-label-and-dropdown">
+              <label class="cta-label">Amount received</label>
+              <label class="cta-label"></label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>

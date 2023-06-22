@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+      />
+
+    <script
+      src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'></script>
+    <script>
+      function Onload() {
+  const ctx = document.getElementById("histogram").getContext("2d");
+
+  const chart = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: [0, 1, 2, 3, 4],
+      datasets: [
+        {
+          label: "Number of Months",
+          data: [19, 28, 20, 16],
+          backgroundColor: "green",
+        },
+      ],
+    },
+    options: {
+      scales: {
+        xAxes: [
+          {
+            display: false,
+            barPercentage: 1.3,
+            ticks: {
+              max: 3,
+            },
+          },
+          {
+            display: true,
+            ticks: {
+              autoSkip: false,
+              max: 4,
+            },
+          },
+        ],
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+            },
+          },
+        ],
+      },
+    },
+  });
+}
+
+    </script>
+    <style>
+      * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.my-impact-main-flex
+{
+  display: flex;
+  flex-direction: column;  
+}
+
+.my-impact-main-flex div{
+  background-image: linear-gradient(to right bottom, #ebfbee, #ebfbee);
+  overflow: hidden;
+}
+
+.my-impact-main-flex .heading-secondary {
+  color: inherit;
+  margin-bottom: 0.2rem;
+}
+
+.my-impact-main-flex .p-element{
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+  color: #555555;
+}
+
+.my-impact-exact-results{
+  display: flex;  
+  justify-content: space-between;
+  align-items: center;  
+}
+
+.my-impact-exact-results-main-value
+{
+  color: #217E0A;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.my-impact-exact-results-main-text
+{
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.my-impact-histogram
+{
+  width:400px;
+  height:200px;
+  margin-bottom: 9rem;;
+}
+
+    </style>
+  </head>
+  <body onload="Onload()">
+    <div class="container">
+      <div class="my-impact-main-flex">
+        <div class="my-impact-histogram">
+          <canvas id="histogram"></canvas>
+        </div>
+        <div class="my-impact-results">
+          <h2 class="heading-secondary">The Savings</h2>
+          <p class="p-element">Statistics modelled per your investement</p>
+
+          <div class="my-impact-exact-results">
+            <div>
+              <h3 class="my-impact-exact-results-main-value">13400</h3>
+              <p class="my-impact-exact-results-main-text">some value</p>
+            </div>
+            <div>
+              <h3 class="my-impact-exact-results-main-value">13400</h3>
+              <p class="my-impact-exact-results-main-text">some value</p>
+            </div>
+            <div>
+              <h3 class="my-impact-exact-results-main-value">13400</h3>
+              <p class="my-impact-exact-results-main-text">some value</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
